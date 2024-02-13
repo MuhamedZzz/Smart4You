@@ -1,0 +1,364 @@
+body {
+    background-color: black;
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+  /* Style for navigation bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+  /* Style for navigation links */
+#navbar a {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    justify-content: space-between;
+    transition: 0.4s;
+}
+#links a {
+    color: white;
+}
+
+#links a:hover {
+    color: black;
+
+}
+  /* Style for Unlock Now button */
+#get-started {
+    background-color: white;
+    color: rgb(29,62,222);
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-style: solid;
+    margin-top: 65px;
+    margin-left: 0px;
+    border-style: solid;
+    border-color: rgb(29,62,222);
+    transition: ease 0.4s;
+    font-weight: bold;
+}
+
+#get-started:hover {
+    background-color: rgb(29,62,222);
+    color: white;
+}
+
+#get-started:active {
+    opacity: 0.4;
+}
+
+#links {
+    margin-top: 65px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+}
+  /* Style for logo */
+#logo {
+    margin-top: 80px;
+    margin-left: 70px;
+    display: block;
+    margin-right: 0;
+    transition: 0.4s;
+}
+
+#logo:hover {
+    width: 150px;
+    margin-right: -10px;
+}
+
+#logo-text {
+    padding: 0;
+    margin-top: 90px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 120px;
+    color: white;
+    display: flex;
+}
+
+#smart4you {
+    margin: 0;
+    padding: 0;
+    margin-top: 75px;
+    display: flex;
+    margin-left: 70px;
+    transition: 0.4s;
+    border-radius: 10px;
+}
+#smart4you:hover {
+    width: 185px;
+    margin-right: 15px;
+}
+
+#contact-header {
+    text-align: center;
+    margin-top: 220px;
+    color: white;
+}
+
+#nav-contact {
+    padding-bottom: 150px;
+}
+
+#nav-contact {
+    position: relative;
+    padding-bottom: 150px;
+}
+
+.background-img {
+    background: url(faq-img.jpg);
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#links #blue-text{
+    color: #4c84ff;
+}
+
+#contact-form {
+    background-color: white;
+    padding-left: 185px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #f9f9ff;
+}
+
+.containerFluid {
+  width: 40%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 71px 571px;
+}
+
+.containerFluid h2 {
+  color: #004389;
+  position: relative;
+  width: 26rem;
+}
+
+.containerFluid h2::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 5px;
+  top: 33px;
+  width: 67px;
+  height: 2px;
+  background-color: #004389;
+}
+
+.accordion {
+  width: 100%;
+  padding: 3px 5px;
+  border: 2px solid #6db5ff;
+  cursor: pointer;
+  border-radius: 50px;
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.accordion .icon {
+  margin: 0 10px 0 0;
+  width: 30px;
+  height: 30px;
+  background: url(https://raw.githubusercontent.com/Tusar78/responsive-accordion/main/images/toggle-bg.png)
+    no-repeat 8px 7px #6db5ff;
+  border-radius: 50%;
+  float: left;
+  transition: all 0.5s ease-in;
+}
+
+.accordion h5 {
+  font-size: 22px;
+  margin: 0;
+  padding: 3px 0 0 0;
+  font-weight: normal;
+  color: #1f5c9a;
+}
+
+.active {
+  background-color: #6db5ff;
+  color: #fff;
+}
+
+.active .icon {
+  background: url(https://raw.githubusercontent.com/Tusar78/responsive-accordion/main/images/toggle-bg.png)
+    no-repeat 8px -25px #fff;
+}
+
+.panel {
+  padding: 0 15px;
+  border-left: 1px solid #6db5ff;
+  margin-left: 25px;
+  font-size: 14px;
+  text-align: justify;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.3s ease-in;
+}
+
+footer {
+    background-color: #333;
+    color: #c9ccdb;
+    padding: 20px 0;
+    padding-bottom: 130px;
+  }
+  
+  footer h2 {
+    color: white;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo-text img {
+    height: 60px;
+    margin-right: 20px;
+  }
+  
+  .logo-text {
+    margin-top: 70px;
+  }
+  
+  .social-media-links a {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #c9ccdb;
+    margin-right: 20px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 0px;
+    line-height: 1px;
+  }
+  
+  .social-media-links i {
+    margin-right: 10px;
+  }
+  
+  footer a:hover {
+    color: rgb(74,119,244);
+  }
+  
+  a:link {
+    text-decoration: none; 
+  }
+  
+  
+  a:visited {
+    text-decoration: none; 
+  }
+  
+  
+  a:hover {
+    text-decoration: none; 
+  }
+  
+  
+  a:active {
+    text-decoration: none; 
+  }
+  
+  .logo-text p {
+    width: 240px;
+    line-height: 20px;
+  }
+  
+  .quick-links {
+    margin-top: 80px;
+  }
+  
+  .quick-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .quick-links li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .quick-links a {
+    color: #c9ccdb;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contact-info {
+    text-align: left;
+    margin-top: 40px;
+  }
+  
+  #copyright {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 0.1px;
+    padding-top: 0.1px;
+    text-align: center;
+    background-color: #2b2a2a;
+  }
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+
+@media only screen and (min-width: 1920px) {
+    #navbar {
+        margin-right: 200px;
+        margin-left: 200px;
+    }
+
+    #smart4you {
+        margin-left: 168px;
+    }
+
+    #all-details {
+        margin-left: 300px;
+    }
+}
+
+@media only screen and (min-width: 1576px) {
+    #navbar {
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (min-width: 1824px) {
+    #navbar {
+        margin-right: 200px;
+        margin-left: 200px;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    #navbar {
+        margin-right: 300px;
+        margin-left: 300px;
+    }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="smart4you.png"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login-style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Smart4You Log in</title>
+
+</head>
+<body>
+      <div id="navbar">
+        <a href="https://riparazioni-cellulari-smart4you.business.site/"><img id="smart4you" src="smart4you.png" alt="" width="200px"></a>
+        <p id="logo-text">FRP Unlock <br> Service</p>
+        <a href="index.html"><img id="logo" src="logo.png" alt="Logo" width="140"></a>
+
+        <a href="#" id="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+
+        <div id="links">
+          <a href="unlock-services.html">Unlock Services</a>
+          <a href="how-it-works.html">How it Works</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <a href="unlock-select.html"><button id="get-started">Get Started</button></a>
+      </div>
+
+   <div class="box">
+    <div class="container">
+
+        <div class="top">
+            <a href="create-account.html"><span>Don't have an account?</span></a>
+            <header>Login</header>
+        </div>
+
+        <div class="input-field">
+            <input type="email" class="input" placeholder="Email" id="email-input" required>
+            <i class='bx bx-user' ></i>
+        </div>
+
+        <div class="input-field">
+            <input type="Password" class="input" placeholder="Password" id="password-input" required>
+            <i class='bx bx-lock-alt'></i>
+        </div>
+
+        <div class="input-field">
+            <button class="submit" id="submit-button">Login</button>
+        </div>
+
+        <div class="two-col">
+            <div class="one">
+               <input type="checkbox" name="" id="check">
+               <label for="check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="forgot-password.html">Forgot password?</a></label>
+                </div>
+            </div>
+        </form>
+        <h1>or</h1>
+        <button class="loginBtn loginBtn--facebook" onclick="signInWithFacebook()">Login with Facebook</button>
+        <button class="loginBtn loginBtn--google" onclick="signInWithGoogle()">Login with Google</button>
+    </div>
+    <script src="https://kit.fontawesome.com/5dcd16b105.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyDV7fyAvnzsYYWs9WVb6LFXkyA9Yzw4GUo",
+          authDomain: "smart4you-frp.firebaseapp.com",
+          databaseURL: "https://smart4you-frp.firebaseio.com",
+          projectId: "smart4you-frp",
+          storageBucket: "smart4you-frp.appspot.com",
+          messagingSenderId: "614423937553",
+          appId: "1:614423937553:web:33c7ffc622ea2ad76667b0"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const submitButton = document.getElementById("submit-button");
+          const emailInput = document.getElementById("email-input");
+          const passwordInput = document.getElementById("password-input");
+
+          submitButton.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            if (!emailInput.value) {
+              alert("Please input your email");
+              return;
+            } else if (!passwordInput.value) {
+              alert("Please input your password");
+              return;
+            } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput.value)) {
+              alert("Email not valid. Please input a valid email.");
+              return;
+            }
+
+            firebase.auth().signInWithEmailAndPassword(emailInput.value, passwordInput.value)
+              .then(function() {
+                window.location.href = "index.html";
+              })
+              .catch(function(error) {
+                alert("Incorrect Email or Password");
+              });
+          });
+        });
+      </script>
+
+      <!-- Start of LiveChat (www.livechat.com) code -->
+      <script>
+        window.__lc = window.__lc || {};
+        window.__lc.license = 14998668;
+        ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+      </script>
+      <noscript><a href="https://www.livechat.com/chat-with/14998668/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+      <!-- End of LiveChat code -->
+</body>
+</html>

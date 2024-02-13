@@ -1,0 +1,46 @@
+<div id="selectDiv">
+    <select id="brandSelect">
+      <option value="brand1">Brand 1</option>
+      <option value="brand2">Brand 2</option>
+    </select>
+    <select id="modelSelect">
+      <option value="modelA">Model A</option>
+      <option value="modelB">Model B</option>
+    </select>
+    <select id="unlockSelect">
+      <option value="unlockType1">Unlock Type 1</option>
+      <option value="unlockType2">Unlock Type 2</option>
+    </select>
+    <button id="unlockNowButton">Unlock Now</button>
+  </div>
+  
+  <div id="paymentDiv" style="display: none;">
+    <p id="selectedModel"></p>
+    <p id="selectedBrand"></p>
+    <p id="selectedUnlockType"></p>
+    <p id="selectedPrice"></p>
+    <!-- Add your PayPal button here -->
+  </div>
+  
+  <script>
+    document.getElementById("unlockNowButton").addEventListener("click", function() {
+      var brand = document.getElementById("brandSelect").value;
+      var model = document.getElementById("modelSelect").value;
+      var unlockType = document.getElementById("unlockSelect").value;
+      var price = calculatePrice(brand, model, unlockType);
+  
+      document.getElementById("selectedModel").innerHTML = "Selected Model: " + model;
+      document.getElementById("selectedBrand").innerHTML = "Selected Brand: " + brand;
+      document.getElementById("selectedUnlockType").innerHTML = "Selected Unlock Type: " + unlockType;
+      document.getElementById("selectedPrice").innerHTML = "Price: $" + price;
+  
+      document.getElementById("selectDiv").style.display = "none";
+      document.getElementById("paymentDiv").style.display = "block";
+    });
+  
+    function calculatePrice(brand, model, unlockType) {
+      // Replace this with your own logic for calculating the price based on the selected options
+      return 100;
+    }
+  </script>
+  

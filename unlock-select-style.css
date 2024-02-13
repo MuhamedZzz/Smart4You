@@ -1,0 +1,642 @@
+body {
+    background-color: black;
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+  /* Style for navigation bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+  /* Style for navigation links */
+#navbar a {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    justify-content: space-between;
+    transition: 0.4s;
+}
+#links a {
+    color: white;
+}
+
+#links a:hover {
+    color: black;
+
+}
+  /* Style for Unlock Now button */
+#get-started {
+    background-color: white;
+    color: rgb(29,62,222);
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-style: solid;
+    margin-top: 65px;
+    margin-left: 0px;
+    border-style: solid;
+    border-color: rgb(29,62,222);
+    transition: ease 0.4s;
+    font-weight: bold;
+}
+
+#get-started:hover {
+    background-color: rgb(29,62,222);
+    color: white;
+}
+
+#get-started:active {
+    opacity: 0.4;
+}
+
+#links {
+    margin-top: 65px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+}
+  /* Style for logo */
+#logo {
+    margin-top: 80px;
+    margin-left: 70px;
+    display: block;
+    margin-right: 0;
+    transition: 0.4s;
+}
+
+#logo:hover {
+    width: 150px;
+    margin-right: -10px;
+}
+
+#logo-text {
+    padding: 0;
+    margin-top: 90px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 120px;
+    color: white;
+    display: flex;
+}
+
+#smart4you {
+    margin: 0;
+    padding: 0;
+    margin-top: 75px;
+    display: flex;
+    margin-left: 70px;
+    transition: 0.4s;
+    border-radius: 10px;
+}
+#smart4you:hover {
+    width: 185px;
+    margin-right: 15px;
+}
+
+#contact-header {
+    text-align: center;
+    margin-top: 220px;
+    color: white;
+}
+
+#nav-contact {
+    padding-bottom: 150px;
+}
+
+#nav-contact {
+    position: relative;
+    padding-bottom: 150px;
+}
+
+.background-img {
+    background: url(unlock-select-img.jpg);
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Options style */
+#and-label {
+  background-color: white;
+  padding: 130px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: #6f7982;
+  align-self: center;
+}
+
+#select-model {
+  margin-left: 55px;
+  margin-bottom: 60px;
+}
+
+#select-unlock {
+  margin-left: 120px;
+}
+
+#select {
+  display: flex;
+  margin-top: 10px;
+}
+
+#brand {
+  margin-right: 26px;
+  padding-left: 10px;
+  padding-right: 140px;
+  font-size: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#model {
+  margin-right: 26px;
+  padding-right: 140px;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#unlock-type {
+  margin-right: 26px;
+  padding-right: 140px;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 83px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#unlock-select {
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 3px;
+  box-shadow: 0px 20px 30px 0px rgb(0 0 29 / 14%);
+  background-image: linear-gradient(to right, rgb(74,119,244) 0%, rgb(0,186,222) 51%, rgb(74,119,244) 100%);
+  padding: 10px 70px;
+  margin-left: 20px;
+  font-weight: 600;
+  border: none;
+  color: #fff;
+  transition: all 0.3s linear;
+}
+
+#unlock-select:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  box-shadow: 0px 20px 30px 0px rgb(0 0 29 / 30%);
+}
+
+footer {
+  background-color: #333;
+  color: #c9ccdb;
+  padding: 20px 0;
+  padding-bottom: 130px;
+}
+
+footer h2 {
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-text img {
+  height: 60px;
+  margin-right: 20px;
+}
+
+.logo-text {
+  margin-top: 70px;
+}
+
+.social-media-links a {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #c9ccdb;
+  margin-right: 20px;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 0px;
+  line-height: 1px;
+}
+
+.social-media-links i {
+  margin-right: 10px;
+}
+
+footer a:hover {
+  color: rgb(74,119,244);
+}
+
+a:link {
+  text-decoration: none; 
+}
+
+
+a:visited {
+  text-decoration: none; 
+}
+
+
+a:hover {
+  text-decoration: none; 
+}
+
+
+a:active {
+  text-decoration: none; 
+}
+
+.logo-text p {
+  width: 240px;
+  line-height: 20px;
+}
+
+.quick-links {
+  margin-top: 80px;
+}
+
+.quick-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.quick-links li {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.quick-links a {
+  color: #c9ccdb;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-info {
+  text-align: left;
+  margin-top: 40px;
+}
+
+#copyright {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 0.1px;
+  padding-top: 0.1px;
+  text-align: center;
+  background-color: #2b2a2a;
+}
+
+@media only screen and (max-width: 768px) {
+    #navbar {
+      flex-direction: column;
+      height: auto;
+    }
+    #logo {
+      margin: 0;
+      padding: 0;
+      align-content: center;
+    }
+    #logo-text {
+      margin-right: 0;
+      margin: 0;
+      text-align: center;
+    }
+    #get-started {
+      margin: 0;
+      margin-top: 38px;
+      margin-right: 20px;
+    }
+    #main-content {
+      margin: 0;
+      margin: 50px;
+      align-content: center;
+    }
+    #smart4you {
+      margin: 0;
+      display: flex;
+    }
+    #links {
+      margin: 0;
+      margin-top: 10px;
+    }
+    #phone-img {
+      width: 50%;
+      margin-bottom: 20px;
+      align-items: center;
+      display: inline-block;
+    }
+    body {
+      margin: 0;
+    }
+}
+
+@media only screen and (max-width: 451px) {
+  #toggle-button {
+    display: flex;
+  }
+  #links {
+    display: none;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+  }
+  #navbar #links a{
+    text-align: center;
+    margin-top: 10px;
+  }
+  #navbar #links a:hover {
+    background-color: rgb(80, 80, 180);
+  }
+  #links.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 1344px) {
+  #and-label label {
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  #options {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #select {
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #unlock-select {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    align-self: center;
+    padding-top: 20px;
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+
+  #brand {
+    padding: 0;
+    margin: 0;
+    padding-left: 280px;
+    padding-right: 265px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #model {
+    margin: 0;
+    padding: 0;
+    padding-left: 280px;
+    padding-right: 291px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #unlock-type {
+    margin: 0;
+    padding: 0;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  label {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  #select-model {
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  #navbar {
+    margin-right: 300px;
+    margin-left: 300px;
+    margin-bottom: 130px;
+  }
+  #main-page {
+    margin-bottom: 100px;
+  }
+
+  #main-content {
+    margin-left: 350px;
+  }
+
+  #main-content p{
+    font-size: 27px;
+  }
+
+  #phone-img {
+    margin-right: 300px;
+    width: 450px;
+  }
+
+  #select {
+    margin-left: 300px;
+  }
+
+  label {
+    margin-left: 300px;
+  }
+
+  #smart4you {
+    margin-left: 135px;
+  }
+
+  #how-text {
+    margin-left: 200px;
+  }
+}
+
+@media only screen and (min-width: 1576px) {
+  #navbar {
+      margin-right: 100px;
+      margin-left: 100px;
+  }
+
+  #main-page {
+    margin-bottom: 100px;
+  }
+
+  #main-content {
+    margin-left: 350px;
+  }
+
+  #main-content p{
+    font-size: 27px;
+  }
+
+  #phone-img {
+    margin-right: 300px;
+    width: 450px;
+  }
+
+  #select {
+    margin-left: 300px;
+  }
+
+  label {
+    margin-left: 300px;
+  }
+}
+
+@media only screen and (min-width: 1824px) {
+  #navbar {
+      margin-right: 200px;
+      margin-left: 200px;
+  }
+
+  #main-page {
+    margin-bottom: 100px;
+  }
+
+  #main-content {
+    margin-left: 350px;
+  }
+
+  #main-content p{
+    font-size: 27px;
+  }
+
+  #phone-img {
+    margin-right: 300px;
+    width: 450px;
+  }
+
+  #select {
+    margin-left: 300px;
+  }
+
+  label {
+    margin-left: 300px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  #navbar {
+      margin-right: 300px;
+      margin-left: 300px;
+  }
+
+  #main-page {
+    margin-bottom: 100px;
+  }
+
+  #main-content {
+    margin-left: 350px;
+  }
+
+  #main-content p{
+    font-size: 27px;
+  }
+
+  #phone-img {
+    margin-right: 300px;
+    width: 450px;
+  }
+
+  #select {
+    margin-left: 300px;
+  }
+
+  label {
+    margin-left: 300px;
+  }
+}
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+
+@media only screen and (min-width: 1920px) {
+    #navbar {
+        margin-right: 200px;
+        margin-left: 200px;
+    }
+
+    #smart4you {
+        margin-left: 168px;
+    }
+
+    #all-details {
+        margin-left: 300px;
+    }
+}
+
+@media only screen and (min-width: 1576px) {
+    #navbar {
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (min-width: 1824px) {
+    #navbar {
+        margin-right: 200px;
+        margin-left: 200px;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    #navbar {
+        margin-right: 300px;
+        margin-left: 300px;
+    }
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="smart4you.png" />
+    <link rel="stylesheet" href="create-account-style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart4You Unlock</title>
+</head>
+<body>
+    <div id="navbar">
+        <a href="https://riparazioni-cellulari-smart4you.business.site/"><img id="smart4you" src="smart4you.png" alt="" width="200px"></a>
+        <p id="logo-text">FRP Unlock <br> Service</p>
+        <a href="index.html"><img id="logo" src="logo.png" alt="Logo" width="140"></a>
+
+        <a href="#" id="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+
+        <div id="links">
+          <a href="unlock-services.html">Unlock Services</a>
+          <a href="how-it-works.html">How it Works</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <a href="unlock-select.html"><button id="get-started">Get Started</button></a>
+      </div>
+
+      <div id="phone-info">
+        <div id="model-type">
+          <p><strong>G SERIES</strong></p>
+        </div>
+          
+        <div id="unlock-type">
+          <p>UNLOCK TYPE <strong> FRP UNLOCK </strong>FOR ONLY <strong> $30.00</strong></p>
+        </div>
+      </div>
+<hr style="width: 25%; border-style: solid; color: white;">
+<div class="box">
+  <div class="container">
+    <form id="signup-form" action="https://formspree.io/f/xnqyznde" method="POST">
+      <div class="top">
+          <header>Contact info</header>
+      </div>
+
+      <div class="input-field">
+          <input type="text" class="input" placeholder="Full name" id="fullname" name="name" required>
+          <i class='bx bx-user' ></i>
+      </div>
+
+      <div class="input-field">
+          <input type="email" class="input" placeholder="Email" id="email" name="email" required>
+          <i class='bx bx-user' ></i>
+      </div>
+
+      <div class="input-field">
+        <input class="input" placeholder="Exact phone model" id="email" name="message" required>
+        <i class='bx bx-user' ></i>
+      </div>
+
+      <div class="two-col">
+          <div class="one">
+             <input type="checkbox" name="" id="check">
+             <label for="check"> Accept privacy and policy</label>
+          </div>
+      </div>
+      <h1>Payment</h1>
+      
+      <div class="input-field">
+        <button name="submit" type="submit" class="submit" id="submit-button">Proceed with payment</button>
+      </div>
+  </form>
+  </div>
+</div>
+
+<script>
+// Import Firebase
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDV7fyAvnzsYYWs9WVb6LFXkyA9Yzw4GUo",
+  authDomain: "smart4you-frp.firebaseapp.com",
+  projectId: "smart4you-frp",
+  storageBucket: "smart4you-frp.appspot.com",
+  messagingSenderId: "614423937553",
+  appId: "1:614423937553:web:33c7ffc622ea2ad76667b0"
+};
+
+// Initialize Firebase
+const app = firebase.initializeApp(firebaseConfig);
+// Initialize variables
+const auth = firebase.auth();
+const database = firebase.database();
+
+// setup register function
+function register() {
+    //get all input fields
+    let fullname = document.getElementById('fullname').value;
+    let email = document.getElementById('email').value;
+
+    //validate input fields
+    if (validate_email(email) === false) {
+        alert('Please type your Email and Password');
+        return;
+    }
+    if (validate_fields(fullname) === false) {
+        return;
+    }
+
+    auth.createUserWithEmailAndPassword(email, password)
+        .then(function() {
+            let user = auth.currentUser;
+
+            //add this user to firebase database
+            let database_ref = database.ref();
+
+            //create user data
+            let user_data = {
+                email: email,
+                fullname: fullname,
+                last_login: Date.now()
+            };
+
+            database_ref.child(`users/${user.uid}`).set(user_data);
+
+            alert('User Created');
+        })
+        .catch(function(error) {
+            let error_code = error.code;
+            let error_message = error.message;
+        });
+}
+
+//validate input fields
+function validate_email(email) {
+    let expression = /^[^@]+@\w+(\.\w+)+\w$/;
+    if (expression.test(email) === true) {
+        //email is good
+        return true;
+    } else {
+        //email is not good
+        return false;
+    }
+}
+</script>
+
+<script src="https://kit.fontawesome.com/5dcd16b105.js" crossorigin="anonymous"></script>
+<!-- Start of LiveChat (www.livechat.com) code -->
+<script>
+  window.__lc = window.__lc || {};
+  window.__lc.license = 14998668;
+  ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechat.com/chat-with/14998668/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+</body>
+</html>
